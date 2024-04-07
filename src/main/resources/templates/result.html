@@ -1,0 +1,17 @@
+<!-- Denne HTML-fil viser den indsendte hilsen. Den bruger Thymeleaf til dynamisk at indsætte id og indhold fra Greeting-modellen på siden. -->
+
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title> <!-- Sætter titlen på websiden, som vises i browserens titellinje. -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <!-- Definerer dokumentets karakterkodning for at sikre korrekt visning af tekst. -->
+</head>
+<body>
+<h1>Result</h1> <!-- Overskrift for resultatsiden. -->
+<p th:text="'id: ' + ${greeting.id}" /> <!-- Viser id fra Greeting-objektet. 'th:text' indsætter dynamisk værdien af 'id' i paragrafen. -->
+<p th:text="'content: ' + ${greeting.content}" /> <!-- Viser indholdet fra Greeting-objektet. 'th:text' indsætter dynamisk værdien af 'content'. -->
+
+<!-- Link til at indsende en ny besked. Når brugeren klikker på dette link, bliver de ført tilbage til formularen til at indsende en ny hilsen. -->
+<a href="/greeting">Submit another message</a>
+</body>
+</html>
